@@ -1,0 +1,241 @@
+ * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+ 
+        body {
+            font-family: Georgia, serif;
+            background-color: #fdf6f0;
+            color: #3b2a1a;
+            padding-top: 76px;
+        }
+ 
+        /* ===== ENCABEZADO ===== */
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 30px;        /* ← cambia el padding */
+            height: 76px;           /* ← altura fija igual a las demás */
+            background-color: #fdf6f0;
+            border-bottom: 1px solid #e5d5c5;
+
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+    }
+ 
+        /* Espacio para que el contenido no quede debajo del header */
+        body {
+            padding-top: 80px;
+        }
+ 
+        .header h2 {
+            font-size: 20px;
+            color: #3b2a1a;
+            margin-left: 10px;
+        }
+ 
+        .menu {
+    display: flex;
+    gap: 5px;
+}
+
+    .menu a {
+    text-decoration: none;
+    color: #d14d72;
+    font-weight: bold;
+    background-color: #f5e6da;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+    .menu a:hover {
+    background-color: #d14d72;
+    color: white;
+}
+
+    /* Página activa — fondo rosado y texto blanco */
+    .menu a.activo {
+    background-color: #d14d72;
+    color: white;
+}
+ 
+        .iconos-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 20px;
+        }
+ 
+        .iconos-header a {
+            text-decoration: none;
+        }
+ 
+        /* ===== SECCIÓN HISTORIA ===== */
+        .historia {
+            text-align: center;
+            padding: 60px 20px 40px;
+        }
+ 
+        .historia span {
+            font-size: 12px;
+            letter-spacing: 3px;
+            color: #c0392b;
+            text-transform: uppercase;
+        }
+ 
+        .historia h1 {
+            font-size: 38px;
+            color: #3b2a1a;
+            margin: 10px 0 20px;
+            line-height: 1.3;
+        }
+ 
+        .historia p {
+            max-width: 550px;
+            margin: 0 auto;
+            font-size: 15px;
+            line-height: 1.8;
+            color: #5a3e2b;
+        }
+ 
+        /* ===== SECCIÓN IMAGEN + VALORES ===== */
+        .nosotros-contenido {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+            padding: 40px 80px 60px;
+            flex-wrap: wrap;
+        }
+ 
+        .nosotros-contenido img {
+            width: 300px;
+            border-radius: 12px;
+            object-fit: cover;
+        }
+ 
+        .valores {
+            max-width: 400px;
+        }
+ 
+        .valores h3 {
+            font-size: 18px;
+            color: #c0392b;
+            margin-bottom: 6px;
+            margin-top: 25px;
+        }
+ 
+        .valores p {
+            font-size: 14px;
+            line-height: 1.7;
+            color: #5a3e2b;
+        }
+ 
+        /* ===== SECCIÓN EQUIPO ===== */
+        .equipo {
+            text-align: center;
+            padding: 40px 20px 60px;
+            background-color: #fdf0e8;
+        }
+ 
+        .equipo h2 {
+            font-size: 28px;
+            color: #3b2a1a;
+            margin-bottom: 30px;
+        }
+ 
+        .tarjetas-equipo {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+ 
+        .tarjeta {
+            background-color: #fff;
+            border-radius: 12px;
+            padding: 25px 20px;
+            width: 200px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+        }
+ 
+        .tarjeta .emoji {
+            font-size: 50px;
+            margin-bottom: 10px;
+        }
+ 
+        .tarjeta h4 {
+            font-size: 16px;
+            color: #3b2a1a;
+            margin-bottom: 5px;
+        }
+ 
+        .tarjeta p {
+            font-size: 13px;
+            color: #8a6a50;
+        }
+ 
+        /* ===== PIE DE PÁGINA ===== */
+        .footer {
+            background-color: #3b1f0f;
+            color: #f5e6d8;
+            padding: 40px 60px 20px;
+        }
+ 
+        .footer-contenedor {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+ 
+        .footer-columna {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+            min-width: 150px;
+        }
+ 
+        .footer-columna h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+            color: #f5e6d8;
+        }
+ 
+        .footer-columna a {
+            text-decoration: none;
+            color: #d4b89a;
+            font-size: 14px;
+        }
+ 
+        .footer-columna a:hover {
+            color: #fff;
+        }
+ 
+        .footer-columna p {
+            font-size: 14px;
+            color: #d4b89a;
+        }
+ 
+        .redes {
+            display: flex;
+            gap: 10px;
+            margin-top: 5px;
+            font-size: 18px;
+        }
+ 
+        .footer-copy {
+            text-align: center;
+            font-size: 13px;
+            color: #a07855;
+            border-top: 1px solid #5a3520;
+            padding-top: 15px;
+        }

@@ -1,151 +1,196 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pagina Principal</title>
     <link rel="stylesheet" href="../PaginaPrincipal/css/styles.css">
+    <link rel="stylesheet" href="../PaginaPrincipal/css/Encab.css">
+
 </head>
 <body>
 
-    <!-- ===== ENCABEZADO PRINCIPAL ===== -->
-    <header class="header">
-        <div style="display: flex; align-items: center;">
-
-            <!-- Logo del sitio web -->
-            <a href=""></a>
-            <img src="../PaginaPrincipal/imageness/etiquetas.png"
-            width="150" 
-            style="border-radius: 50%;" alt="Logo del sitio">
-
-            <!-- Nombre del emprendimiento -->
+     <header class="header">
+ 
+        <a href="PaginaWeb.html" class="header-logo">
+            <img src="../PaginaPrincipal/imageness/etiquetas.png" alt="Logo">
             <h2>EL DULCE SABOR</h2>
-        </div>
-
-        <!-- Menú de navegación para acceder a las diferentes páginas -->
+        </a>
+ 
         <nav class="menu">
-            <a href="PaginaWeb.html">Inicio</a>
+            <a href="PaginaWeb.html" class="activo">Inicio</a>
             <a href="../Productos/Productos.html">Productos</a>
+            <a href="../Nosotros/Nosotros.html">Nosotros</a>
             <a href="../Contactanos/Contactanos.html">Contactanos</a>
         </nav>
+ 
+        <div class="iconos-header">
+            <a href="../Cuenta/Cuentas.html">👤</a>
+            <a href="../Carrito/Compras.html" style="position:relative;">
+                🛍️
+                <span class="contador">2</span>
+            </a>
+        </div>
+ 
     </header>
-    
-
-    <!-- ===== SECCIÓN PRINCIPAL ===== -->
-    <section class="principal">
-    
-    <!-- Contenedor del contenido de texto -->
-    <div class="contenido">
-
-        <!-- Título principal del sitio -->
-        <h2 style="margin: 10;">Endulza 💕 tus momentos</h2>
-
-        <!-- Descripción del negocio -->
-        <p> Repostería casera hecha con amor y los mejores ingredientes. </p>
-
-        <!-- Botón que redirige a la página de productos -->
-        <a href="../Productos/Productos.html" class="btn">Ver productos</a>
-    </div>
-
-    <!-- Imagen representativa del negocio -->
-    <div class="imagen" style="text-align: center;">
-        <img src="../PaginaPrincipal/imageness/wafles.jpg" width="200"
-        style="border-radius: 40%; margin-right: 200px;">
-    </div>
-
-</section>
-
-
-<!-- ===== SEGUNDA SECCIÓN ===== -->
-<section class="seccion2">
-
-    <div class="encabezado2">
-
-        <!-- Título de la sección -->
-        <h2>¿POR QUÉ ELEGIRNOS?</h2>
-
-        <!-- Contenedor de características del negocio -->
-        <div class="s2">
-
-        <!-- Tarjeta 1 -->
-        <div>
-            <img src="../PaginaPrincipal/imageness/gorrito.png" alt="" width="100">
-            <h2>Hecho con AMOR</h2>
-            <p>Cada receta y preparación es especial</p>
-        </div>
-
-        <!-- Tarjeta 2 -->
-        <div>
-            <img src="../PaginaPrincipal/imageness/calidaduwu.png" alt="" width="157">
-            <h2>Ingredientes de CALIDAD</h2>
-            <p>Frescos y Seleccionados</p>
-        </div>
-
-        <!-- Tarjeta 3 -->
-        <div>
-            <img src="../PaginaPrincipal/imageness/carrito.png" alt="" width="240">
-            <h2>Pedidos personalizados</h2>
-            <p>Entregas a Domicilio</p>
-        </div>
-        
-        <!-- Tarjeta 4 -->
-        <div>
-            <img src="../PaginaPrincipal/imageness/limpioo.png" alt="" width="150">
-            <h2>Higiene y seguridad</h2>
-            <P>Calidad y cantidad</P>
-        </div>
-        
-        </div>
-    </div>
-</section>
-
-<!-- ===== PIE DE PÁGINA ===== -->
-<footer class="footer">
-    <section class="footer-contenedor">
-
-        <article class="footer-columna">
-            <h3>🍰 Dulce Sabor</h3>
-            <p>
-                Repostería artesanal hecha con amor,
-                ingredientes frescos y mucho cariño desde 2015.
-            </p>
-        </article>
-
-        <article class="footer-columna">
-            <h3>Tienda</h3>
-            <a href="productos.html">Pasteles</a>
-            <a href="productos.html">Cupcakes</a>
-            <a href="productos.html">Macarons</a>
-            <a href="contacto.html">Pedidos especiales</a>
-        </article>
-
-        <article class="footer-columna">
-            <h3>Compañía</h3>
-            <a href="nosotros.html">Nuestra historia</a>
-            <a href="contacto.html">Contacto</a>
-            <a href="productos.html">Productos</a>
-            <a href="index.html">Inicio</a>
-        </article>
-
-        <article class="footer-columna">
-            <h3>Visítanos</h3>
-            <p>📍 Av. Dulce 123, Lima</p>
-            <p>📞 920 418 421</p>
-            <p>Eldulcesabor@gmail.com </p>
-
-            <div class="redes">
-                <span>ⓘ</span>
-                <span>f</span>
-                <span>📷</span>
+ 
+ 
+    <!-- ===== HERO ===== -->
+    <section class="hero">
+ 
+        <div class="hero-texto">
+            <div class="hero-badge">🍰 Hechos a mano cada mañana</div>
+            <h1>Dulces momentos, <span>horneados con amor</span></h1>
+            <p>Pasteles artesanales y postres de autor para hacer tus celebraciones inolvidables.</p>
+            <div class="hero-botones">
+                <a href="../Productos/Productos.html" class="btn-primario">Ver catálogo →</a>
+                <a href="../Contactanos/Contactanos.html" class="btn-secundario">Pedidos especiales</a>
             </div>
-        </article>
-
+        </div>
+ 
+        <div class="hero-imagen">
+            <img src="../PaginaPrincipal/imageness/wafles.jpg" alt="Postres El Dulce Sabor">
+            <div class="hero-badge-flotante">
+                <span>💕</span>
+                <div>
+                    <strong>+10k</strong>
+                    <p>Clientes felices</p>
+                </div>
+            </div>
+        </div>
+ 
     </section>
-
-    <p class="footer-copy">
-        © 2026 Dulce Aroma - Todos los derechos reservados
-    </p>
-</footer>
-
+ 
+ 
+    <!-- ===== NUESTROS FAVORITOS ===== -->
+    <section class="favoritos">
+ 
+        <div class="favoritos-encabezado">
+            <div>
+                <p class="etiqueta">Lo más pedido</p>
+                <h2>Nuestros favoritos</h2>
+            </div>
+            <a href="../Productos/Productos.html">Ver todos →</a>
+        </div>
+ 
+        <div class="grilla-productos">
+ 
+            <div class="tarjeta-producto">
+                <img src="../Productos/Imagenes/leches.png" alt="Torta 3 leches">
+                <div class="info">
+                    <p class="categoria">Pasteles</p>
+                    <h3>Torta de 3 Leches</h3>
+                    <p class="precio">S/ 60.00</p>
+                </div>
+            </div>
+ 
+            <div class="tarjeta-producto">
+                <img src="../Productos/Imagenes/alfajores.png" alt="Alfajores">
+                <div class="info">
+                    <p class="categoria">Dulces</p>
+                    <h3>Alfajores</h3>
+                    <p class="precio">S/ 15.00</p>
+                </div>
+            </div>
+ 
+            <div class="tarjeta-producto">
+                <img src="../Productos/Imagenes/choco.png" alt="Torta de Chocolate">
+                <div class="info">
+                    <p class="categoria">Panadería</p>
+                    <h3>Torta de Chocolate</h3>
+                    <p class="precio">S/ 50.00</p>
+                </div>
+            </div>
+ 
+            <div class="tarjeta-producto">
+                <img src="../Productos/Imagenes/muff.png" alt="Muffins">
+                <div class="info">
+                    <p class="categoria">Cupcakes</p>
+                    <h3>Muffins Surtidos</h3>
+                    <p class="precio">S/ 10.00</p>
+                </div>
+            </div>
+ 
+        </div>
+    </section>
+ 
+ 
+    <!-- ===== ¿POR QUÉ ELEGIRNOS? ===== -->
+    <section class="porque">
+        <h2>¿Por qué elegirnos?</h2>
+        <div class="porque-grilla">
+ 
+            <div class="porque-tarjeta">
+                <div class="icono">💕</div>
+                <h3>Hecho con amor</h3>
+                <p>Cada postre es preparado a mano con dedicación y cariño.</p>
+            </div>
+ 
+            <div class="porque-tarjeta">
+                <div class="icono">🌿</div>
+                <h3>Ingredientes premium</h3>
+                <p>Mantequilla fresca, chocolate belga, frutas locales.</p>
+            </div>
+ 
+            <div class="porque-tarjeta">
+                <div class="icono">✨</div>
+                <h3>Recetas de autor</h3>
+                <p>Más de 10 años perfeccionando nuestro arte.</p>
+            </div>
+ 
+            <div class="porque-tarjeta">
+                <div class="icono">🚚</div>
+                <h3>Pedidos a domicilio</h3>
+                <p>Entregamos en Lima con el mismo cuidado de siempre.</p>
+            </div>
+ 
+        </div>
+    </section>
+ 
+ 
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <section class="footer-contenedor">
+ 
+            <article class="footer-columna">
+                <h3>🍰 Dulce Sabor</h3>
+                <p>Repostería artesanal hecha con amor, ingredientes frescos y mucho cariño desde 2015.</p>
+            </article>
+ 
+            <article class="footer-columna">
+                <h3>Tienda</h3>
+                <a href="../Productos/Productos.html">Pasteles</a>
+                <a href="../Productos/Productos.html">Cupcakes</a>
+                <a href="../Productos/Productos.html">Macarons</a>
+                <a href="../Contactanos/Contactanos.html">Pedidos especiales</a>
+            </article>
+ 
+            <article class="footer-columna">
+                <h3>Compañía</h3>
+                <a href="../Nosotros/Nosotros.html">Nuestra historia</a>
+                <a href="../Contactanos/Contactanos.html">Contacto</a>
+                <a href="../Productos/Productos.html">Productos</a>
+                <a href="PaginaWeb.html">Inicio</a>
+            </article>
+ 
+            <article class="footer-columna">
+                <h3>Visítanos</h3>
+                <p>📍 Av. Dulce 123, Lima</p>
+                <p>📞 920 418 421</p>
+                <p>Eldulcesabor@gmail.com</p>
+                <div class="redes">
+                    <span>ⓘ</span>
+                    <span>f</span>
+                    <span>📷</span>
+                </div>
+            </article>
+ 
+        </section>
+ 
+        <p class="footer-copy">
+            © 2026 El Dulce Sabor - Todos los derechos reservados
+        </p>
+    </footer>
+ 
 </body>
 </html>

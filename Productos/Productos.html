@@ -9,136 +9,238 @@
 </head>
 <body>
     
-<!-- Título de la página -->
-    <h1>Productos</h1>
-    <a href="../PaginaPrincipal/PaginaWeb.html">Volver Inicio</a><br>
-
-
-<!-- MENÚ DE CATEGORÍAS -->
-<div class="menu"> 
-    <h2 style="color: black;">Categorías</h2>
-    <a href="Productos.html">Todos</a>                 <!-- Enlace para mostrar todos los productos -->
-
-    <!-- Botones que filtran productos por categoría usando JavaScript -->
-    <button onclick="mostrar('tortas')">🍰 Tortas</button>
-    <button onclick="mostrar('pies')">🥧 Pies y Tartas</button>
-    <button onclick="mostrar('dulces')">🍪 Dulces</button>
-    <button onclick="mostrar('cupcakes')">🧁 Cupcakes</button>
-    <button onclick="mostrar('Helados')">🍨Postres Helados</button>
-</div>
-
-<!-- CONTENEDOR DE PRODUCTOS -->
-<div class="productos">
-          
-        <!-- Cada producto tiene dos clases:
-        1. "producto" (estructura general)
-        2. categoría (para filtrado con JS) -->
-
-    <div class="producto tortas">    
-        <img src="../Productos/Imagenes/choco.png" alt="Torta">
-        <h3>Torta de Chocolate</h3>
-        <p style="color: white;">S/ 50.00</p><br>
-        <button>Comprar</button>
+<header class="header">
+        <div class="header-logo">
+            <img src="../PaginaPrincipal/imageness/etiquetas.png"
+                 width="55" style="border-radius: 50%;" alt="Logo">
+            <h2>EL DULCE SABOR</h2>
+        </div>
+ 
+        <nav class="menu-nav">
+            <a href="../PaginaPrincipal/PaginaWeb.html">Inicio</a>
+            <a href="../Productos/Productos.html" class="activo">Productos</a>
+            <a href="../Nosotros/Nosotros.html">Nosotros</a>
+            <a href="../Contactanos/Contactanos.html">Contactanos</a>
+        </nav>
+ 
+        <div class="iconos-header">
+            <a href="../Cuenta/Cuentas.html">👤</a>
+            <a href="../Carrito/Compras.html">🛍️</a>
+            <span class="contador">2</span>
+        </div>
+    </header>
+ 
+ 
+    <!-- ===== TÍTULO ===== -->
+    <h1 class="titulo-pagina">🍰 Nuestros Productos</h1>
+ 
+ 
+    <!-- ===== BARRA DE CATEGORÍAS CON DESPLEGABLE ===== -->
+    <div class="barra-categorias">
+ 
+        <!-- Botón para ver todos -->
+        <button class="btn-todos" onclick="mostrarTodos()">🍽️ Todos</button>
+ 
+        <!-- Menú desplegable de categorías -->
+        <div class="desplegable">
+            <button class="btn-desplegable" onclick="toggleMenu()">
+                📂 Categorías ▾
+            </button>
+ 
+            <div class="lista-categorias" id="listaCategorias">
+                <button onclick="mostrar('tortas')">🍰 Tortas</button>
+                <hr>
+                <button onclick="mostrar('pies')">🥧 Pies y Tartas</button>
+                <hr>
+                <button onclick="mostrar('dulces')">🍪 Dulces</button>
+                <hr>
+                <button onclick="mostrar('cupcakes')">🧁 Cupcakes</button>
+                <hr>
+                <button onclick="mostrar('Helados')">🍨 Postres Helados</button>
+            </div>
+        </div>
+ 
+        <!-- Etiqueta que muestra la categoría activa -->
+        <span class="categoria-activa" id="etiquetaActiva">Mostrando: Todos</span>
+ 
     </div>
-
-    <div class="producto pies">
-        <img src="../Productos/Imagenes/pie.png" alt="Pie" width="0">
-        <h3>Pie de Manzana</h3>
-        <p style="color: white;">S/ 20.00</p><br>
-        <button>Comprar</button>
+ 
+ 
+    <!-- ===== PRODUCTOS ===== -->
+    <div class="productos">
+ 
+        <div class="producto tortas">
+            <img src="../Productos/Imagenes/choco.png" alt="Torta de Chocolate">
+            <h3>Torta de Chocolate</h3>
+            <p>S/ 50.00</p>
+            <button>Comprar</button>
+        </div>
+ 
+        <div class="producto pies">
+            <img src="../Productos/Imagenes/pie.png" alt="Pie de Manzana">
+            <h3>Pie de Manzana</h3>
+            <p>S/ 20.00</p>
+            <button>Comprar</button>
+        </div>
+ 
+        <div class="producto dulces">
+            <img src="../Productos/Imagenes/alfajores.png" alt="Alfajores">
+            <h3>Alfajores</h3>
+            <p>S/ 15.00</p>
+            <button>Comprar</button>
+        </div>
+ 
+        <div class="producto tortas">
+            <img src="../Productos/Imagenes/leches.png" alt="Torta 3 leches">
+            <h3>Torta de 3 leches</h3>
+            <p>S/ 60.00</p>
+            <button>Comprar</button>
+        </div>
+ 
+        <div class="producto dulces">
+            <img src="../Productos/Imagenes/donitas.png" alt="Donas">
+            <h3>Donas</h3>
+            <p>S/ 20.00</p>
+            <button>Comprar</button>
+        </div>
+ 
+        <div class="producto dulces">
+            <img src="../Productos/Imagenes/brow.png" alt="Brownie">
+            <h3>Brownie</h3>
+            <p>S/ 17.00</p>
+            <button>Comprar</button>
+        </div>
+ 
+        <div class="producto pies">
+            <img src="../Productos/Imagenes/chiskei.png" alt="Cheesecake">
+            <h3>Cheesecake</h3>
+            <p>S/ 7.00</p>
+            <button>Comprar</button>
+        </div>
+ 
+        <div class="producto dulces">
+            <img src="../Productos/Imagenes/galleti.png" alt="Galletas">
+            <h3>Galletas</h3>
+            <p>S/ 10.00</p>
+            <button>Comprar</button>
+        </div>
+ 
+        <div class="producto cupcakes">
+            <img src="../Productos/Imagenes/muff.png" alt="Muffins">
+            <h3>Muffins</h3>
+            <p>S/ 10.00</p>
+            <button>Comprar</button>
+        </div>
+ 
+        <div class="producto Helados">
+            <img src="../Productos/Imagenes/flanns.png" alt="Flan">
+            <h3>Flan</h3>
+            <p>S/ 20.00</p>
+            <button>Comprar</button>
+        </div>
+ 
     </div>
-
-    <div class="producto dulces">
-        <img src="../Productos/Imagenes/alfajores.png" alt="Alfajor">
-        <h3>Alfajores</h3>
-        <p style="color: white;">S/ 15.00</p><br>
-        <button>Comprar</button>
-    </div>
-
-    <div class="producto tortas">
-        <img src="../Productos/Imagenes/leches.png" alt="3leches">
-        <h3>Torta de 3 leches</h3>
-        <p style="color: white;">S/ 60.00</p><br>
-        <button>Comprar</button>
-    </div>
-
-    <div class="producto dulces">
-        <img src="../Productos/Imagenes/donitas.png" alt="Donas">
-        <h3>Donas</h3>
-        <p style="color: white;">S/ 20.00</p><br>
-        <button>Comprar</button>
-    </div>
-
-    <div class="producto dulces">
-        <img src="../Productos/Imagenes/brow.png" alt="Brownie">
-        <h3>Brownie</h3>
-        <p style="color: white;">S/ 17.00</p><br>
-        <button>Comprar</button>
-    </div>
-
-    <div class="producto pies">
-        <img src="../Productos/Imagenes/chiskei.png" alt="Cheesecake">
-        <h3>Cheesecake</h3>
-        <p style="color: white;">S/ 7.00</p><br>
-        <button>Comprar</button>
-        
-    </div>
-    <div class="producto dulces">
-        <img src="../Productos/Imagenes/galleti.png" alt="Galletas">
-        <h3>Galletas</h3>
-        <p style="color: white;">S/ 10.00</p>
-        <button>Comprar</button>
-    </div>
-    
-    <div class="producto cupcakes">
-        <img src="../Productos/Imagenes/muff.png" alt="Muffins">
-        <h3>Muffins</h3>
-        <p style="color: white;">S/ 10.00</p>
-        <button>Comprar</button>
-    </div>
-
-    <div class="producto Helados">
-        <img src="../Productos/Imagenes/flanns.png" alt="Flan">
-        <h3>Flan</h3>
-        <p style="color: white;">S/ 20.00</p>
-        <button>Comprar</button>
-    </div>
-
-    <div class="producto">
-        <img src="cupcake.jpg" alt="Cupcake">
-        <h3>Cupcakes</h3>
-        <p style="color: white;">S/ 15.00</p>
-        <button>Comprar</button>
-    </div>
-
-    <div class="producto">
-        <img src="cupcake.jpg" alt="Cupcake">
-        <h3>Cupcakes</h3>
-        <p style="color: white;">S/ 15.00</p>
-        <button>Comprar</button>
-    </div>
-</div>
+ 
+ 
+    <!-- ===== PIE DE PÁGINA ===== -->
+    <footer class="footer">
+        <section class="footer-contenedor">
+ 
+            <article class="footer-columna">
+                <h3>🍰 Dulce Sabor</h3>
+                <p>Repostería artesanal hecha con amor,
+                   ingredientes frescos y mucho cariño desde 2015.</p>
+            </article>
+ 
+            <article class="footer-columna">
+                <h3>Tienda</h3>
+                <a href="Productos.html">Pasteles</a>
+                <a href="Productos.html">Cupcakes</a>
+                <a href="Productos.html">Macarons</a>
+                <a href="../Contactanos/Contactanos.html">Pedidos especiales</a>
+            </article>
+ 
+            <article class="footer-columna">
+                <h3>Compañía</h3>
+                <a href="../Nosotros/Nosotros.html">Nuestra historia</a>
+                <a href="../Contactanos/Contactanos.html">Contacto</a>
+                <a href="Productos.html">Productos</a>
+                <a href="../PaginaPrincipal/PaginaWeb.html">Inicio</a>
+            </article>
+ 
+            <article class="footer-columna">
+                <h3>Visítanos</h3>
+                <p>📍 Av. Dulce 123, Lima</p>
+                <p>📞 920 418 421</p>
+                <p>Eldulcesabor@gmail.com</p>
+                <div class="redes">
+                    <span>ⓘ</span>
+                    <span>f</span>
+                    <span>📷</span>
+                </div>
+            </article>
+ 
+        </section>
+ 
+        <p class="footer-copy">
+            © 2026 El Dulce Sabor - Todos los derechos reservados
+        </p>
+    </footer>
 
 <!-- SCRIPT PARA FILTRAR PRODUCTOS -->
 <script>
-function mostrar(categoria) {
-
-    // Selecciona todos los productos
-    let productos = document.querySelectorAll('.producto');
-
-    // Oculta todos
-    productos.forEach(p => {
-        p.style.display = "none"; // oculta todo
-    });
-
-    // Muestra solo los de la categoría seleccionada
-    let seleccionados = document.querySelectorAll("." + categoria);
-
-    seleccionados.forEach(p => {
-        p.style.display = "flex"; // muestra solo esa categoria
-    });
-}
-</script>
-
+ 
+        // Abre y cierra el menú desplegable
+        function toggleMenu() {
+            let lista = document.getElementById('listaCategorias');
+            lista.classList.toggle('abierto');
+        }
+ 
+        // Cierra el desplegable si el usuario hace clic fuera
+        document.addEventListener('click', function(e) {
+            let desplegable = document.querySelector('.desplegable');
+            if (!desplegable.contains(e.target)) {
+                document.getElementById('listaCategorias').classList.remove('abierto');
+            }
+        });
+ 
+        // Muestra solo los productos de la categoría elegida
+        function mostrar(categoria) {
+            let productos = document.querySelectorAll('.producto');
+ 
+            productos.forEach(p => {
+                p.style.display = 'none';
+            });
+ 
+            let seleccionados = document.querySelectorAll('.' + categoria);
+            seleccionados.forEach(p => {
+                p.style.display = 'flex';
+            });
+ 
+            // Actualiza la etiqueta de categoría activa
+            let nombres = {
+                tortas: '🍰 Tortas',
+                pies: '🥧 Pies y Tartas',
+                dulces: '🍪 Dulces',
+                cupcakes: '🧁 Cupcakes',
+                Helados: '🍨 Postres Helados'
+            };
+            document.getElementById('etiquetaActiva').textContent = 'Mostrando: ' + nombres[categoria];
+ 
+            // Cierra el desplegable al elegir
+            document.getElementById('listaCategorias').classList.remove('abierto');
+        }
+ 
+        // Muestra todos los productos
+        function mostrarTodos() {
+            let productos = document.querySelectorAll('.producto');
+            productos.forEach(p => {
+                p.style.display = 'flex';
+            });
+            document.getElementById('etiquetaActiva').textContent = 'Mostrando: Todos';
+        }
+ 
+    </script>
+ 
 </body>
 </html>

@@ -7,53 +7,139 @@
     <link rel="stylesheet" href="../Contactanos/css/styles.css">
 </head>
 
-<!-- Enlace para volver a la página principal -->
-<a href="../PaginaPrincipal/PaginaWeb.html" class="volver">Volver Inicio</a>
-
 <body>
-<style>
-   /* FONDO GENERAL DE LA PÁGINA */
-   body {
-       font-family: Arial, sans-serif; 
-       background: linear-gradient(135deg, #ffd6e0, #fff0f5, #ffe4ec);  
-       margin: 0; 
-       padding: 0;
-       color: #fff; 
-   }
-</style>
-
-<!-- Contenedor principal del formulario -->
-<div class="contenedor">
-
-    <!-- Título de la página -->
-    <h1 style="color: black;">Contacto</h1>
-
-    <!-- Descripción para el usuario -->
-    <p style="color: black;">Estamos listos para atender tus dudas y pedidos especiales</p>
-
-    <!-- Información de contacto -->
-    <p style="color: black;"><strong>Whatsapp:</strong>926 766 248/924 315 575</p>
-    <p style="color: black;"><strong>Correo</strong> Eldulcesaber@gmail.com</p>
-
-    <!-- Formulario de contacto -->
-    <form>
-
-        <!-- Campo para ingresar nombre -->
-        <label style="color: black;">Nombre:</label><br>
-        <input type="text" placeholder="Tu nombre"><br><br>
-
-        <!-- Campo para ingresar correo -->
-        <label style="color: black;">Correo:</label><br>
-        <input type="email" placeholder="Tu correo"><br><br>
-
-        <!-- Campo para escribir mensaje -->
-        <label style="color: black;">Mensaje:</label><br>
-        <textarea placeholder="Escribe tu mensaje"></textarea><br><br>
-
-        <!-- Botón para enviar el formulario -->
-        <button type="submit">Enviar</button>
-    </form>
-</div>
-
+<header class="header">
+        <div class="header-logo">
+            <img src="../PaginaPrincipal/imageness/etiquetas.png"
+                 width="55" style="border-radius: 50%;" alt="Logo">
+            <h2>EL DULCE SABOR</h2>
+        </div>
+ 
+        <nav class="menu-nav">
+            <a href="../PaginaPrincipal/PaginaWeb.html">Inicio</a>
+            <a href="../Productos/Productos.html">Productos</a>
+            <a href="../Nosotros/Nosotros.html">Nosotros</a>
+            <a href="../Contactanos/Contactanos.html" class="activo">Contactanos</a>
+        </nav>
+ 
+        <div class="iconos-header">
+            <a href="../Cuenta/Cuentas.html">👤</a>
+            <a href="../Carrito/Compras.html">🛍️</a>
+            <span class="contador">2</span>
+        </div>
+    </header>
+ 
+ 
+    <!-- ===== TÍTULO ===== -->
+    <section class="titulo-seccion">
+        <span>Contáctanos</span>
+        <h1>Hablemos de tu próximo postre</h1>
+        <p>¿Pedido especial, evento o simplemente quieres saludar? Escríbenos.</p>
+    </section>
+ 
+ 
+    <!-- ===== FORMULARIO + INFO ===== -->
+    <section class="contacto-contenido">
+ 
+        <!-- Formulario -->
+        <div class="formulario">
+            <form action="" method="GET">
+            <label>Nombre</label>
+            <input type="text" placeholder="Tu nombre">
+ 
+            <label>Correo</label>
+            <input type="email" placeholder="tu@correo.com">
+ 
+            <label>Mensaje</label>
+            <textarea placeholder="Cuéntanos sobre tu pedido..."></textarea>
+ 
+            <button class="btn-enviar">Enviar mensaje</button>
+            </form>
+        </div>
+ 
+        <!-- Tarjetas de información -->
+        <div class="info-columna">
+ 
+            <div class="tarjeta-info">
+                <div class="icono-info">📍</div>
+                <div>
+                    <h4>Dirección</h4>
+                    <p>Av. Dulce 123, Lima</p>
+                </div>
+            </div>
+ 
+            <div class="tarjeta-info">
+                <div class="icono-info">📞</div>
+                <div>
+                    <h4>Teléfono</h4>
+                    <p>920 418 421</p>
+                </div>
+            </div>
+ 
+            <div class="tarjeta-info">
+                <div class="icono-info">✉️</div>
+                <div>
+                    <h4>Correo</h4>
+                    <p>Eldulcesabor@gmail.com</p>
+                </div>
+            </div>
+ 
+            <div class="tarjeta-info">
+                <div class="icono-info">🕐</div>
+                <div>
+                    <h4>Horario</h4>
+                    <p>Lun–Sáb 8:00 a 20:00 · Dom 9:00 a 14:00</p>
+                </div>
+            </div>
+ 
+        </div>
+ 
+    </section>
+ 
+ 
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <section class="footer-contenedor">
+ 
+            <article class="footer-columna">
+                <h3>🍰 Dulce Sabor</h3>
+                <p>Repostería artesanal hecha con amor,
+                   ingredientes frescos y mucho cariño desde 2015.</p>
+            </article>
+ 
+            <article class="footer-columna">
+                <h3>Tienda</h3>
+                <a href="../Productos/Productos.html">Pasteles</a>
+                <a href="../Productos/Productos.html">Cupcakes</a>
+                <a href="../Productos/Productos.html">Macarons</a>
+                <a href="../Contactanos/Contactanos.html">Pedidos especiales</a>
+            </article>
+ 
+            <article class="footer-columna">
+                <h3>Compañía</h3>
+                <a href="../Nosotros/Nosotros.html">Nuestra historia</a>
+                <a href="../Contactanos/Contactanos.html">Contacto</a>
+                <a href="../Productos/Productos.html">Productos</a>
+                <a href="../PaginaPrincipal/PaginaWeb.html">Inicio</a>
+            </article>
+ 
+            <article class="footer-columna">
+                <h3>Visítanos</h3>
+                <p>📍 Av. Dulce 123, Lima</p>
+                <p>📞 920 418 421</p>
+                <p>Eldulcesabor@gmail.com</p>
+                <div class="redes">
+                    <span>ⓘ</span>
+                    <span>f</span>
+                    <span>📷</span>
+                </div>
+            </article>
+ 
+        </section>
+ 
+        <p class="footer-copy">
+            © 2026 El Dulce Sabor - Todos los derechos reservados
+        </p>
+    </footer>
 </body>
 </html>
