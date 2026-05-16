@@ -1,0 +1,61 @@
+body{
+    font-family: Arial, sans-serif;
+    background: #f4cbd3;
+    margin: 0;
+    padding: 20px;
+}
+
+/* BOTÓN VOLVER */
+.volver{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: #ff7fa6;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.volver:hover{
+    background: #ff5c8a;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor{
+    max-width: 500px;
+    margin: 80px auto; /* para que no choque con el botón */
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+}
+
+/* TITULO */
+h1{
+    color: #d63384;
+}
+
+/* INPUTS */
+input, textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+
+/* BOTÓN ENVIAR */
+button{
+    background: #ff7fa6;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+button:hover{
+    background: #ff5c8a;
+}

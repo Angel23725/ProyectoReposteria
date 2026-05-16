@@ -1,0 +1,197 @@
+/* ===== ESTILOS GENERALES ===== */
+body{
+    margin: 0; /* Quita el espacio por defecto del navegador */
+    font-family: Arial, sans-serif; /* Tipo de letra */
+}
+
+/* ===== HEADER (ENCABEZADO) ===== */
+.header{
+    display: flex; /* Activa flexbox */
+    justify-content: space-between; /* Separa contenido izquierda y derecha */
+    align-items: center; /* Centra verticalmente */
+    padding:10px 20px; /* Espacio interno */
+    border-bottom:2px solid #e7518f ; /* Línea inferior */
+}
+
+/* Título del header */
+.header h2{
+    color:rgb(221, 68, 127); /* Color rosado */
+}
+
+/* ===== MENÚ DE NAVEGACIÓN ===== */
+.menu a {
+    margin-left: 20px; /* Espacio entre enlaces */
+    text-decoration: none; /* Quita subrayado */
+    color: rgb(221, 68, 127); /* Color del texto */
+    font-weight: bold; /* Negrita */
+}
+
+/* Efecto cuando pasas el mouse */
+.menu a:hover {
+    color: #bd658a; /* Cambia de color */
+}
+
+/* ===== SECCIÓN PRINCIPAL ===== */
+.principal {
+    display: flex; /* Organiza en fila */
+    justify-content: space-between; /* Separa contenido */
+    align-items: center; /* Centra verticalmente */
+    background-color: #ffe6f0; /* Fondo rosado claro */
+    padding: 40px; /* Espaciado interno */
+}
+
+/* Contenedor del texto */
+.contenido {
+    max-width: 50%; /* Ocupa la mitad del ancho */
+}
+
+/* Título principal */
+.contenido h2 {
+    font-size: 40px; /* Tamaño grande */
+    color: rgb(183, 59, 107); /* Color */
+}
+
+/* Párrafo principal */
+.contenido p {
+    font-size: 16px; /* Tamaño normal */
+    margin: 15px 0; /* Espacio arriba y abajo */
+}
+
+/* Botón */
+.btn {
+    display: inline-block; /* Permite padding */
+    background-color: #d14d72; 
+    color: white; /* Texto blanco */
+    padding: 10px 20px; 
+    text-decoration: none; /* Quita subrayado */
+    border-radius: 20px; 
+    font-weight: bold; 
+}
+
+/* Efecto hover del botón */
+.btn:hover {
+    background-color: #ff80ab; /* Cambia de color */
+}
+
+/* ===== SEGUNDA SECCIÓN ===== */
+
+/* Título de la sección */
+.encabezado2 h2{
+    color:#3d1722; 
+    display: flex; 
+    justify-content: center; /* Centra horizontal */
+    align-items: center; /* Centra vertical */
+    padding:20px; /* Espaciado */
+    font-size: 24px; 
+}
+
+/* Contenedor general */
+.seccion2 {
+    padding: 30px 0; 
+    max-width: 900px; 
+    margin: 0 auto; 
+}
+
+/* Contenedor de tarjetas */
+.s2{
+    color:#3d1722; /* Color texto */
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    text-align: center; 
+    padding:20px; /* Espacio interno */
+    gap: 30px; /* Espacio entre elementos */
+    flex-wrap: wrap; /* Permite que bajen a otra fila */
+}
+
+/* Cada tarjeta */
+.s2 div {   
+    background-color: #fff0f5; /* Fondo rosado claro */
+    padding: 20px; /* Espacio interno */
+    border-radius: 15px; /* Bordes redondeados */
+    width: 180px; /* Ancho fijo */
+}
+
+/* Texto dentro de tarjetas */
+.s2 p {
+    color: #3d1722; 
+    font-weight: bold; /* Negrita */
+    font-size: 14px;
+}
+.footer {
+    background-color: #57291f;
+    color: white;
+    padding: 60px 12% 20px;
+}
+
+.footer-contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.footer-columna {
+    width: 230px;
+}
+
+.footer-columna h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-columna p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #f3d6c6;
+}
+
+.footer-columna a {
+    display: block;
+    text-decoration: none;
+    color: #f3d6c6;
+    font-size: 14px;
+    margin-bottom: 8px;
+    transition: color 0.3s;
+}
+
+.footer-columna a:hover {
+    color: white;
+}
+
+.redes {
+    display: flex;
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.redes span {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #f3d6c6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 45px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    color: #f3d6c6;
+    font-size: 13px;
+}
+
+@media (max-width: 768px) {
+    .footer-contenedor {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .redes {
+        justify-content: center;
+    }
+}

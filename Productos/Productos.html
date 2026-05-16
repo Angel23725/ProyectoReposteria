@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Productoss</title>
+    <link rel="stylesheet" href="../Productos/css/styles.css">
+
+</head>
+<body>
+    
+<!-- Título de la página -->
+    <h1>Productos</h1>
+    <a href="../PaginaPrincipal/PaginaWeb.html">Volver Inicio</a><br>
+
+
+<!-- MENÚ DE CATEGORÍAS -->
+<div class="menu"> 
+    <h2 style="color: black;">Categorías</h2>
+    <a href="Productos.html">Todos</a>                 <!-- Enlace para mostrar todos los productos -->
+
+    <!-- Botones que filtran productos por categoría usando JavaScript -->
+    <button onclick="mostrar('tortas')">🍰 Tortas</button>
+    <button onclick="mostrar('pies')">🥧 Pies y Tartas</button>
+    <button onclick="mostrar('dulces')">🍪 Dulces</button>
+    <button onclick="mostrar('cupcakes')">🧁 Cupcakes</button>
+    <button onclick="mostrar('Helados')">🍨Postres Helados</button>
+</div>
+
+<!-- CONTENEDOR DE PRODUCTOS -->
+<div class="productos">
+          
+        <!-- Cada producto tiene dos clases:
+        1. "producto" (estructura general)
+        2. categoría (para filtrado con JS) -->
+
+    <div class="producto tortas">    
+        <img src="../Productos/Imagenes/choco.png" alt="Torta">
+        <h3>Torta de Chocolate</h3>
+        <p style="color: white;">S/ 50.00</p><br>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto pies">
+        <img src="../Productos/Imagenes/pie.png" alt="Pie" width="0">
+        <h3>Pie de Manzana</h3>
+        <p style="color: white;">S/ 20.00</p><br>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto dulces">
+        <img src="../Productos/Imagenes/alfajores.png" alt="Alfajor">
+        <h3>Alfajores</h3>
+        <p style="color: white;">S/ 15.00</p><br>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto tortas">
+        <img src="../Productos/Imagenes/leches.png" alt="3leches">
+        <h3>Torta de 3 leches</h3>
+        <p style="color: white;">S/ 60.00</p><br>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto dulces">
+        <img src="../Productos/Imagenes/donitas.png" alt="Donas">
+        <h3>Donas</h3>
+        <p style="color: white;">S/ 20.00</p><br>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto dulces">
+        <img src="../Productos/Imagenes/brow.png" alt="Brownie">
+        <h3>Brownie</h3>
+        <p style="color: white;">S/ 17.00</p><br>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto pies">
+        <img src="../Productos/Imagenes/chiskei.png" alt="Cheesecake">
+        <h3>Cheesecake</h3>
+        <p style="color: white;">S/ 7.00</p><br>
+        <button>Comprar</button>
+        
+    </div>
+    <div class="producto dulces">
+        <img src="../Productos/Imagenes/galleti.png" alt="Galletas">
+        <h3>Galletas</h3>
+        <p style="color: white;">S/ 10.00</p>
+        <button>Comprar</button>
+    </div>
+    
+    <div class="producto cupcakes">
+        <img src="../Productos/Imagenes/muff.png" alt="Muffins">
+        <h3>Muffins</h3>
+        <p style="color: white;">S/ 10.00</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto Helados">
+        <img src="../Productos/Imagenes/flanns.png" alt="Flan">
+        <h3>Flan</h3>
+        <p style="color: white;">S/ 20.00</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="cupcake.jpg" alt="Cupcake">
+        <h3>Cupcakes</h3>
+        <p style="color: white;">S/ 15.00</p>
+        <button>Comprar</button>
+    </div>
+
+    <div class="producto">
+        <img src="cupcake.jpg" alt="Cupcake">
+        <h3>Cupcakes</h3>
+        <p style="color: white;">S/ 15.00</p>
+        <button>Comprar</button>
+    </div>
+</div>
+
+<!-- SCRIPT PARA FILTRAR PRODUCTOS -->
+<script>
+function mostrar(categoria) {
+
+    // Selecciona todos los productos
+    let productos = document.querySelectorAll('.producto');
+
+    // Oculta todos
+    productos.forEach(p => {
+        p.style.display = "none"; // oculta todo
+    });
+
+    // Muestra solo los de la categoría seleccionada
+    let seleccionados = document.querySelectorAll("." + categoria);
+
+    seleccionados.forEach(p => {
+        p.style.display = "flex"; // muestra solo esa categoria
+    });
+}
+</script>
+
+</body>
+</html>
