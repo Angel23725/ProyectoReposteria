@@ -1,0 +1,457 @@
+/* =============================================
+   LIBRO DE RECLAMACIONES - CSS
+   ============================================= */
+
+/* HERO */
+.lr-hero {
+    background: linear-gradient(135deg, #57291f 0%, #8b3a2a 60%, #c06c84 100%);
+    padding: 80px 8% 70px;
+    text-align: center;
+    color: white;
+}
+.lr-hero-contenido {
+    max-width: 700px;
+    margin: 0 auto;
+}
+.lr-icono-principal {
+    font-size: 64px;
+    margin-bottom: 20px;
+    display: block;
+}
+.lr-hero h1 {
+    font-size: clamp(32px, 5vw, 52px);
+    font-weight: 700;
+    margin-bottom: 16px;
+    font-family: Ubuntu, sans-serif;
+    letter-spacing: -0.5px;
+}
+.lr-hero p {
+    font-size: clamp(15px, 2vw, 18px);
+    color: #f3d6c6;
+    line-height: 1.7;
+    max-width: 560px;
+    margin: 0 auto;
+}
+
+/* AVISO LEGAL */
+.lr-aviso {
+    background-color: #fff8f0;
+    border-left: 5px solid #c06c84;
+    padding: 18px 8%;
+}
+.lr-aviso-inner {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    max-width: 900px;
+    margin: 0 auto;
+}
+.lr-aviso-icono {
+    font-size: 22px;
+    color: #c06c84;
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+.lr-aviso p {
+    font-size: 14px;
+    color: #5a3a2a;
+    line-height: 1.6;
+}
+.lr-aviso strong {
+    color: #57291f;
+}
+
+/* SECCIÓN PRINCIPAL */
+.lr-seccion {
+    padding: 60px 8% 80px;
+    background-color: #fdf9f6;
+}
+.lr-contenedor {
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* TARJETAS QUEJA/RECLAMO */
+.lr-diferencia {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+}
+.lr-dif-card {
+    background: white;
+    border-radius: 20px;
+    padding: 28px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    box-shadow: 0 4px 20px rgba(87,41,31,0.08);
+    border-top: 4px solid transparent;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.lr-dif-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(87,41,31,0.14);
+}
+.lr-dif-reclamo { border-top-color: #e07b4a; }
+.lr-dif-queja   { border-top-color: #c06c84; }
+.lr-dif-icono { font-size: 36px; }
+.lr-dif-card h3 {
+    font-size: 20px;
+    color: #57291f;
+    font-weight: 700;
+}
+.lr-dif-card p {
+    font-size: 14px;
+    color: #7a5c44;
+    line-height: 1.5;
+}
+
+/* FORMULARIO WRAPPER */
+.lr-form-wrapper {
+    background: white;
+    border-radius: 24px;
+    padding: 44px 48px;
+    box-shadow: 0 4px 30px rgba(87,41,31,0.10);
+}
+.lr-form-titulo {
+    font-size: 22px;
+    color: #57291f;
+    font-weight: 700;
+    margin-bottom: 28px;
+    padding-bottom: 12px;
+    border-bottom: 2px solid #f2edd1;
+    font-family: Lora, serif;
+}
+
+/* GRUPOS DE FORMULARIO */
+.lr-form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+.lr-grupo {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.lr-grupo label {
+    font-size: 14px;
+    font-weight: 600;
+    color: #57291f;
+}
+.lr-grupo input,
+.lr-grupo textarea,
+.lr-grupo select {
+    padding: 13px 16px;
+    border: 1.5px solid #e8d5c8;
+    border-radius: 12px;
+    font-size: 15px;
+    font-family: Ubuntu, sans-serif;
+    color: #332310;
+    background-color: #fffaf7;
+    outline: none;
+    transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+.lr-grupo input:focus,
+.lr-grupo textarea:focus {
+    border-color: #c06c84;
+    box-shadow: 0 0 0 3px rgba(192,108,132,0.12);
+    background-color: white;
+}
+.lr-grupo textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+.lr-grupo input[type="date"] {
+    cursor: pointer;
+}
+
+/* FILA DE DOS COLUMNAS */
+.lr-fila-dos {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+/* RADIO BUTTONS PERSONALIZADOS */
+.lr-radio-grupo {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.lr-radio-opcion {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    padding: 14px 24px;
+    border: 1.5px solid #e8d5c8;
+    border-radius: 12px;
+    font-size: 15px;
+    font-weight: 600;
+    color: #57291f;
+    background: #fffaf7;
+    transition: all 0.2s ease;
+    flex: 1;
+    min-width: 140px;
+    justify-content: center;
+}
+.lr-radio-opcion:has(input:checked) {
+    border-color: #c06c84;
+    background-color: #fce8ef;
+    color: #c06c84;
+}
+.lr-radio-opcion input[type="radio"] {
+    display: none;
+}
+
+/* SEPARADOR DE SECCIONES */
+.lr-separador {
+    margin-top: 10px;
+}
+
+/* BOTONES DE ACCIÓN */
+.lr-acciones {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.lr-btn-enviar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #57291f;
+    color: white;
+    padding: 15px 32px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    text-decoration: none;
+    font-family: Ubuntu, sans-serif;
+    transition: background 0.3s ease, transform 0.2s ease;
+    flex: 1;
+    justify-content: center;
+}
+.lr-btn-enviar:hover {
+    background-color: #c06c84;
+    transform: translateY(-2px);
+}
+.lr-btn-imprimir {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: white;
+    color: #57291f;
+    padding: 15px 32px;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    border: 2px solid #57291f;
+    cursor: pointer;
+    font-family: Ubuntu, sans-serif;
+    transition: all 0.3s ease;
+    flex: 1;
+    justify-content: center;
+}
+.lr-btn-imprimir:hover {
+    background-color: #57291f;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* NOTA DE ENVÍO */
+.lr-nota-envio {
+    font-size: 13px;
+    color: #9a7060;
+    line-height: 1.6;
+    text-align: center;
+    padding: 0 10px;
+}
+
+/* TARJETAS DE INFO EXTRA */
+.lr-info-extra {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+.lr-info-card {
+    background: white;
+    border-radius: 16px;
+    padding: 24px 20px;
+    text-align: center;
+    box-shadow: 0 4px 16px rgba(87,41,31,0.08);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    transition: transform 0.3s ease;
+}
+.lr-info-card:hover { transform: translateY(-4px); }
+.lr-info-icono { font-size: 28px; }
+.lr-info-card h4 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #57291f;
+}
+.lr-info-card p {
+    font-size: 13px;
+    color: #7a5c44;
+    line-height: 1.4;
+}
+
+/* FOOTER LEGAL LINK */
+.footer-legal {
+    display: flex;
+    justify-content: center;
+    padding: 14px 0 4px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin-top: 16px;
+}
+.footer-libro-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #f3d6c6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border: 1px solid rgba(243,214,198,0.4);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.footer-libro-link:hover {
+    background-color: rgba(243,214,198,0.15);
+    color: white;
+    border-color: rgba(243,214,198,0.8);
+}
+.activo-libro {
+    background-color: rgba(243,214,198,0.15);
+    color: white;
+}
+
+/* PRINT STYLES */
+@media print {
+    .header, .lr-hero, .lr-aviso, .lr-diferencia,
+    .lr-info-extra, .footer, .lr-acciones, .lr-nota-envio { display: none; }
+    .lr-form-wrapper { box-shadow: none; padding: 0; }
+    body { padding-top: 0; }
+    .lr-seccion { padding: 0; background: white; }
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .lr-form-wrapper { padding: 28px 20px; }
+    .lr-fila-dos { grid-template-columns: 1fr; }
+    .lr-diferencia { grid-template-columns: 1fr; }
+    .lr-info-extra { grid-template-columns: repeat(2, 1fr); }
+    .lr-acciones { flex-direction: column; }
+    .lr-radio-grupo { flex-direction: column; }
+}
+@media (max-width: 480px) {
+    .lr-info-extra { grid-template-columns: 1fr; }
+    .lr-seccion { padding: 40px 5% 60px; }
+}
+
+/* =============================================
+   MODO OSCURO
+   ============================================= */
+
+body.modo-oscuro {
+    background-color: #1a1410;
+    color: #f0e6da;
+}
+
+/* Aviso legal */
+body.modo-oscuro .lr-aviso {
+    background-color: #241a14;
+    border-left-color: #e8a8b8;
+}
+body.modo-oscuro .lr-aviso p { color: #c9b8a8; }
+body.modo-oscuro .lr-aviso strong { color: #f0e6da; }
+
+/* Sección principal */
+body.modo-oscuro .lr-seccion { background-color: #1a1410; }
+
+/* Tarjetas queja/reclamo */
+body.modo-oscuro .lr-dif-card {
+    background-color: #2e2117;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+body.modo-oscuro .lr-dif-card h3 { color: #f0e6da; }
+body.modo-oscuro .lr-dif-card p { color: #c9b8a8; }
+
+/* Formulario */
+body.modo-oscuro .lr-form-wrapper {
+    background-color: #241a14;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.4);
+}
+body.modo-oscuro .lr-form-titulo {
+    color: #e8a8b8;
+    border-bottom-color: #3a2a1f;
+}
+body.modo-oscuro .lr-grupo label { color: #f0e6da; }
+body.modo-oscuro .lr-grupo input,
+body.modo-oscuro .lr-grupo textarea,
+body.modo-oscuro .lr-grupo select {
+    background-color: #2e2117;
+    border-color: #4a3525;
+    color: #f0e6da;
+}
+body.modo-oscuro .lr-grupo input:focus,
+body.modo-oscuro .lr-grupo textarea:focus {
+    border-color: #e8a8b8;
+    box-shadow: 0 0 0 3px rgba(232,168,184,0.15);
+    background-color: #2e2117;
+}
+body.modo-oscuro .lr-grupo input::placeholder,
+body.modo-oscuro .lr-grupo textarea::placeholder { color: #7a6255; }
+
+/* Radio buttons */
+body.modo-oscuro .lr-radio-opcion {
+    background-color: #2e2117;
+    border-color: #4a3525;
+    color: #f0e6da;
+}
+body.modo-oscuro .lr-radio-opcion:has(input:checked) {
+    border-color: #e8a8b8;
+    background-color: #3a2017;
+    color: #e8a8b8;
+}
+
+/* Botón imprimir */
+body.modo-oscuro .lr-btn-imprimir {
+    background-color: #241a14;
+    color: #f0e6da;
+    border-color: #f0e6da;
+}
+body.modo-oscuro .lr-btn-imprimir:hover {
+    background-color: #f0e6da;
+    color: #241a14;
+}
+
+/* Nota de envío */
+body.modo-oscuro .lr-nota-envio { color: #8a7060; }
+
+/* Tarjetas info extra */
+body.modo-oscuro .lr-info-card {
+    background-color: #2e2117;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+}
+body.modo-oscuro .lr-info-card h4 { color: #f0e6da; }
+body.modo-oscuro .lr-info-card p { color: #c9b8a8; }
+
+
+body {
+    font-family: Ubuntu, sans-serif;
+}
+
+.lr-form-titulo {
+    font-family: Ubuntu, sans-serif;
+}

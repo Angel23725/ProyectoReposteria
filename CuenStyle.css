@@ -1,0 +1,569 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fdf6f0;
+    color: #3b2a1a;
+    padding-top: 76px;
+}
+
+/* HEADER */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px;
+    height: 76px;
+    border-bottom: 1px solid #e5d5c5;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+.header-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #3b2a1a;
+}
+
+.header-logo img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.header-logo h2 {
+    font-size: 18px;
+    color: #3b2a1a;
+}
+
+.menu {
+    display: flex;
+    gap: 5px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: #c06c84;
+    font-weight: bold;
+    background-color: #f5e6da;
+    padding: 10px 18px;
+    border-radius: 20px;
+    font-size: 14px;
+}
+
+.menu a:hover {
+    background-color: #6e1b3f;
+    color: white;
+}
+
+.menu a.activo {
+    background-color: #6e1b3f;
+    color: white;
+}
+
+.iconos-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    font-size: 22px;
+}
+
+.iconos-header a {
+    text-decoration: none;
+    color: #3b2a1a;
+}
+
+.btn-carrito {
+    position: relative;
+    background: none;
+    border: none;
+    font-size: 22px;
+    cursor: pointer;
+}
+
+.badge-carrito {
+    position: absolute;
+    top: -6px;
+    right: -8px;
+    background-color: #bd3f58;
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* TÍTULO */
+.titulo-cuenta {
+    text-align: center;
+    font-size: 28px;
+    color: #3b2a1a;
+    margin: 40px 0 10px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor-cuenta {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 0 20px;
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* PANEL IZQUIERDO - LOGIN */
+.panel-login {
+    flex: 1;
+    min-width: 260px;
+    max-width: 320px;
+}
+
+.panel-login h3 {
+    font-size: 16px;
+    color: #3b2a1a;
+    margin-bottom: 20px;
+}
+
+.panel-login input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0cfc4;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #fffaf7;
+    margin-bottom: 12px;
+    outline: none;
+    font-family: Arial, sans-serif;
+}
+
+.panel-login input:focus {
+    border-color: #c06c84;
+}
+
+.btn-ingresar {
+    width: 100%;
+    padding: 14px;
+    background: none;
+    border: 2px solid #3b2a1a;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #3b2a1a;
+    font-family: Arial, sans-serif;
+    margin-top: 5px;
+}
+
+.btn-ingresar:hover {
+    background-color: #3b2a1a;
+    color: white;
+}
+
+.olvide {
+    display: block;
+    text-align: center;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #c06c84;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+/* DIVISOR */
+.divisor {
+    width: 1px;
+    background-color: #e0cfc4;
+    align-self: stretch;
+}
+
+/* PANEL DERECHO - REGISTRO */
+.panel-registro {
+    flex: 1;
+    min-width: 280px;
+    max-width: 400px;
+}
+
+.panel-registro h3 {
+    font-size: 16px;
+    color: #3b2a1a;
+    margin-bottom: 20px;
+}
+
+.fila-doble {
+    display: flex;
+    gap: 10px;
+}
+
+.panel-registro input,
+.panel-registro select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #e0cfc4;
+    border-radius: 10px;
+    font-size: 14px;
+    background-color: #fffaf7;
+    margin-bottom: 12px;
+    outline: none;
+    font-family: Arial, sans-serif;
+    color: #3b2a1a;
+}
+
+.panel-registro input:focus,
+.panel-registro select:focus {
+    border-color: #c06c84;
+}
+
+.fila-fecha {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 12px;
+}
+
+.fila-fecha select {
+    margin-bottom: 0;
+    flex: 1;
+}
+
+.label-campo {
+    font-size: 13px;
+    color: #7a5c44;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* BARRA DE SEGURIDAD */
+.seguridad-barra {
+    height: 4px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+    background-color: #eee;
+}
+
+.seguridad-texto {
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #aaa;
+}
+
+/* TÉRMINOS */
+.terminos {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 13px;
+    color: #7a5c44;
+    margin-bottom: 16px;
+}
+
+.terminos input {
+    width: auto;
+    margin: 0;
+}
+
+.terminos a {
+    color: #c06c84;
+}
+
+/* BOTONES */
+.btn-registrarse {
+    width: 100%;
+    padding: 14px;
+    background-color: #3b1f0f;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    margin-bottom: 10px;
+}
+
+.btn-registrarse:hover {
+    background-color: #c06c84;
+}
+
+.btn-facebook {
+    width: 100%;
+    padding: 14px;
+    background-color: #1877f2;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-facebook:hover {
+    background-color: #1464d8;
+}
+
+/* CAMPO CONTRASEÑA */
+.campo-password {
+    position: relative;
+    margin-bottom: 4px;
+}
+
+.campo-password input {
+    margin-bottom: 0;
+}
+
+.toggle-pass {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+    color: #aaa;
+}
+
+/* FOOTER */
+.footer {
+    background-color: #57291f;
+    color: white;
+    padding: 30px 12% 10px;
+    margin-top: 60px;
+}
+
+.footer-contenedor {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.footer-columna {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer-columna h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.footer-columna p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #f3d6c6;
+}
+
+.footer-columna a {
+    text-decoration: none;
+    color: #f3d6c6;
+    font-size: 14px;
+}
+
+.footer-columna a:hover {
+    color: white;
+}
+
+.redes {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.redes span {
+    width: 28px;
+    height: 28px;
+    border: 1px solid #f3d6c6;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-copy {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(255,255,255,0.2);
+    color: #f3d6c6;
+    font-size: 13px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 700px) {
+    .divisor {
+        display: none;
+    }
+
+    .contenedor-cuenta {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .panel-login,
+    .panel-registro {
+        max-width: 100%;
+    }
+}
+
+.footer-legal {
+    display: flex;
+    justify-content: center;
+    padding: 14px 0 4px;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    margin-top: 16px;
+}
+.footer-libro-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: #f3d6c6;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border: 1px solid rgba(243,214,198,0.4);
+    border-radius: 20px;
+    transition: all 0.3s ease;
+}
+.footer-libro-link:hover {
+    background-color: rgba(243,214,198,0.15);
+    color: white;
+    border-color: rgba(243,214,198,0.8);
+}
+
+    
+/* =============================================
+MODO OSCURO
+============================================= */
+
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn-modo-oscuro {
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    padding: 0;
+    color: #3b2a1a;
+}
+
+body.modo-oscuro {
+    background-color: #1a1410;
+    color: #f0e6da;
+}
+
+/* Header */
+body.modo-oscuro .header {
+    background-color: #241a14;
+    border-bottom: 1px solid #4a3525;
+}
+body.modo-oscuro .header-logo h2 { color: #e8a8b8; }
+body.modo-oscuro .header-logo { color: #f0e6da; }
+body.modo-oscuro .iconos-header a { color: #f0e6da; }
+body.modo-oscuro .btn-carrito,
+body.modo-oscuro .btn-modo-oscuro { color: #f0e6da; }
+body.modo-oscuro .menu a {
+    background-color: #3a2a1f;
+    color: #e8a8b8;
+}
+body.modo-oscuro .menu a:hover { background-color: #6e1b3f; color: white; }
+body.modo-oscuro .menu a.activo { background-color: #d14d72; color: white; }
+
+/* Título */
+body.modo-oscuro .titulo-cuenta { color: #f0e6da; }
+
+/* Paneles */
+body.modo-oscuro .panel-login h3,
+body.modo-oscuro .panel-registro h3 { color: #f0e6da; }
+
+body.modo-oscuro .label-campo { color: #c9b8a8; }
+
+body.modo-oscuro .panel-login input,
+body.modo-oscuro .panel-registro input,
+body.modo-oscuro .panel-registro select {
+    background-color: #2e2117;
+    border-color: #4a3525;
+    color: #f0e6da;
+}
+body.modo-oscuro .panel-login input:focus,
+body.modo-oscuro .panel-registro input:focus,
+body.modo-oscuro .panel-registro select:focus { border-color: #e8a8b8; }
+
+body.modo-oscuro .btn-ingresar {
+    border-color: #f0e6da;
+    color: #f0e6da;
+}
+body.modo-oscuro .btn-ingresar:hover {
+    background-color: #f0e6da;
+    color: #1a1410;
+}
+
+body.modo-oscuro .divisor { background-color: #4a3525; }
+
+body.modo-oscuro .terminos { color: #c9b8a8; }
+
+body.modo-oscuro .seguridad-barra { background-color: #3a2a1f; }
+
+/* =============================================
+MODALES DE BOOTSTRAP (registro, login, recuperar)
+============================================= */
+
+.modal-content {
+    background-color: #fff9f5;
+    border: none;
+}
+
+.modal-body {
+    color: #5a4a3f;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+.modal-footer {
+    background-color: #fdf0e8;
+    border-top: 1px solid #f0dcc8;
+    border-radius: 0 0 16px 16px;
+}
+
+.modal-backdrop.show {
+    opacity: 0.6;
+}
+
+body.modo-oscuro .modal-content {
+    background-color: #241a14;
+    color: #f0e6da;
+}
+
+body.modo-oscuro .modal-body {
+    color: #d8b8a0;
+}
+
+body.modo-oscuro .modal-footer {
+    background-color: #1f1610;
+    border-top: 1px solid #3a2a1f;
+}
+
+body.modo-oscuro .btn-secondary {
+    background-color: #3a2a1f;
+    border-color: #4a3525;
+}
